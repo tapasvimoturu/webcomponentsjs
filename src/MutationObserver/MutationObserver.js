@@ -197,11 +197,13 @@
       if (!registrations)
         registrationsTable.set(target, registrations = []);
 
-      // 2
+      // 2 // Tapasvi Is an invalid use case as the same observer can observe multiple
+      // nodes with different options.
+      
       // If target's list of registered observers already includes a registered
       // observer associated with the context object, replace that registered
       // observer's options with options.
-      var registration;
+      /*var registration;
       for (var i = 0; i < registrations.length; i++) {
         if (registrations[i].observer === this) {
           registration = registrations[i];
@@ -209,7 +211,7 @@
           registration.options = options;
           break;
         }
-      }
+      }*/
 
       // 3.
       // Otherwise, add a new registered observer to target's list of registered
